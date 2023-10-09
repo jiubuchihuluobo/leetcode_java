@@ -3,12 +3,15 @@ package com.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution2578 {
+/**
+ * https://leetcode.cn/problems/split-with-minimum-sum/
+ */
+public class SplitWithMinimumSum {
     List<Integer> numList;
     List<Integer> numList1;
     List<Integer> numList2;
 
-    public Solution2578() {
+    public SplitWithMinimumSum() {
         numList = new ArrayList<>();
         numList1 = new ArrayList<>();
         numList2 = new ArrayList<>();
@@ -69,7 +72,7 @@ public class Solution2578 {
     }
 
     public static void main(String[] args) {
-        Solution2578 solution2578 = new Solution2578();
-        System.out.println(solution2578.splitNum(1001));
+        SplitWithMinimumSum splitWithMinimumSum = new SplitWithMinimumSum();
+        System.out.println(splitWithMinimumSum.splitNum(1001));
     }
 }
