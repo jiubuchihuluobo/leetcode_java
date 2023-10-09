@@ -22,8 +22,11 @@ public class Solution2578 {
         }
         numList.sort(null);
 
-        int startIndex = binarySearchNotZero(numList);
-        numList = numList.subList(startIndex, numList.size());
+        if (!numList.isEmpty() && numList.get(1) == 0) {
+            int startIndex = binarySearchNotZero(numList);
+            numList = numList.subList(startIndex, numList.size());
+        }
+
 
         if (numList.size() == 1) {
             return numList.get(0);
@@ -56,6 +59,11 @@ public class Solution2578 {
             } else {
                 high = mid - 1;
             }
+        }
+
+        // 如果low指向列表外,或者最终指向的值为0
+        if (low >= numList.size() || numList.get(low) == 0) {
+            return -1;
         }
         return low;
     }
